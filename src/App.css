@@ -1,38 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:linear-gradient(rgb(0, 255, 200),rgb(0, 140, 255));
+}
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-color: rgb(243, 72, 4);
+  text-decoration-thickness: 3px;
+}
+
+
+.todoApp {
+  background-color: #fff;
+  padding: 20px 20px;
+  height: 700px;
+  width: 500px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.286), -10px -10px 50px rgba(0, 0, 0, 0.226);
+}
+
+.todo--head {
+  font-size: 40px;
+  font-weight: 1000;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .todo--input {
+  background: rgb(105, 45, 45);
+  height: 50px;
+  width: 100%;
+} */
+
+
+form {
+  height: 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  padding: 5px;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input input {
+  width: 90%;
+  height: 100%;
+  font-size: 25px;
+  border: none;
+  padding-left: 20px;
+  border: 1px solid grey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button button {
+  width: 80%;
+  height: 100%;
+  font-size: 50px;
+  font-weight: 1000;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(149, 0, 194);
+  color: #fff;
+  cursor: pointer;
+  transition: .3s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+.button button:hover {
+  background-color: rgb(0, 203, 218);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo--list {
+  height: 520px;
+  width: 480px;
+  margin-left: 5px;
+  overflow-y: auto;
 }
+
+.todos {
+  background-color: rgb(235, 236, 255);
+  height: 53px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  margin-top: 20px;
+}
+
+.todos .todo--txt p{
+  font-size: 25px;
+  padding-left: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.7s ease-out;
+}
+
+.todos .todo--txt p:hover {
+  text-decoration-color: rgb(0, 188, 194);
+}
+
+.todos .todo--delBtn button {
+  width: 85%;
+  margin-left: 15px;
+  border: none;
+  height: 100%;
+  background-color: rgb(243, 72, 4);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 1000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s ease-out;
+}
+
+.todos .todo--delBtn button:hover {
+  background-color: rgb(149, 0, 194);
+}
+
+.todo--clear button {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(149, 0, 194);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 1000;
+  width: 70px;
+  height: 40px;
+  cursor: pointer;
+  transition: .3s ease-out;
+}
+
+.todo--clear button:hover {
+  background-color: rgb(243, 72, 4);
+} 
